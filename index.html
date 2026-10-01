@@ -1,41 +1,1219 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Portfolio of Nouran Mohsen Moustafa - Network Security and Cybersecurity graduate." />
-  <title>Nouran Mohsen | Network Security Portfolio</title>
-  <style>
-    :root { --bg:#07111f; --panel:#0c1a2d; --panel2:#10233c; --line:rgba(170,205,235,.16); --text:#ecf5ff; --muted:#a6b8ca; --cyan:#4de1e9; --blue:#5f8dff; --lime:#b8f06a; }
-    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.6} body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.35;background-image:linear-gradient(rgba(91,157,210,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(91,157,210,.07) 1px,transparent 1px);background-size:54px 54px;mask-image:linear-gradient(#000,transparent 80%)}
-    a{color:inherit;text-decoration:none}.wrap{width:min(1120px,calc(100% - 40px));margin:auto}.nav{height:112px;display:flex;align-items:center;justify-content:space-between;position:relative;z-index:3}.brand{display:block;white-space:nowrap;transform:translateY(11px);font-family:"Trebuchet MS","Arial Narrow",sans-serif;font-size:2rem;font-weight:900;line-height:1;letter-spacing:-.045em}.brand i{color:var(--cyan);font-style:normal}.links{display:flex;gap:22px;color:var(--muted);font-size:.88rem}.links a:hover{color:var(--cyan)}
-    .hero{min-height:625px;display:grid;grid-template-columns:1.25fr .75fr;gap:45px;align-items:center;padding:70px 0 80px;position:relative}.eyebrow{display:flex;align-items:center;gap:9px;color:var(--cyan);font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.14em}.dot{width:9px;height:9px;border-radius:50%;background:var(--lime);box-shadow:0 0 18px var(--lime)}h1{font-size:clamp(3.15rem,7.1vw,6.45rem);line-height:.93;letter-spacing:-.065em;margin:20px 0 23px;max-width:720px}h1 span{color:transparent;-webkit-text-stroke:1px var(--cyan)}.intro{font-size:1.12rem;color:var(--muted);max-width:640px;margin:0 0 31px}.actions{display:flex;gap:12px;flex-wrap:wrap}.button{padding:13px 18px;border-radius:7px;border:1px solid var(--cyan);font-weight:700;font-size:.92rem;transition:.2s}.button.primary{background:var(--cyan);color:#06202c}.button:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(77,225,233,.18)}
-    .terminal{background:linear-gradient(145deg,#112642,#081728);border:1px solid var(--line);border-radius:14px;padding:22px;box-shadow:18px 22px 0 rgba(77,225,233,.05),0 24px 50px rgba(0,0,0,.25);font-family:"Cascadia Code",Consolas,monospace;font-size:.78rem;color:#b8cadb}.terminal-head{display:flex;gap:6px;margin-bottom:25px}.terminal-head b{width:9px;height:9px;background:#ff6e68;border-radius:50%}.terminal-head b:nth-child(2){background:#ffd769}.terminal-head b:nth-child(3){background:#61df8c}.terminal p{margin:8px 0}.terminal .cmd{color:var(--cyan)}.terminal .out{color:var(--lime);padding-left:15px}.terminal .cursor{color:var(--cyan);animation:blink 1s step-end infinite}@keyframes blink{50%{opacity:0}}
-    section{padding:95px 0;position:relative}.section-label{color:var(--cyan);font-size:.76rem;text-transform:uppercase;letter-spacing:.16em;font-weight:800}.section-title{font-size:clamp(2rem,4vw,3.45rem);line-height:1.04;letter-spacing:-.045em;margin:12px 0 20px}.section-copy{color:var(--muted);max-width:720px;font-size:1.05rem}.split{display:grid;grid-template-columns:1fr 1.1fr;gap:60px;align-items:start}.pill-grid{display:flex;flex-wrap:wrap;gap:9px;margin-top:26px}.pill{font-size:.81rem;border:1px solid var(--line);padding:8px 10px;border-radius:5px;background:rgba(20,46,76,.42);color:#d2dfec}
-    .capabilities{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.cap{padding:19px;background:var(--panel);border:1px solid var(--line);border-radius:9px}.cap strong{display:block;color:var(--cyan);margin-bottom:5px;font-size:.9rem}.cap span{font-size:.86rem;color:var(--muted)}.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.project{min-height:390px;display:flex;flex-direction:column;padding:24px;border:1px solid var(--line);border-radius:10px;background:linear-gradient(145deg,var(--panel),#091728);transition:.25s}.project:hover{border-color:rgba(77,225,233,.52);transform:translateY(-5px)}.project.featured{grid-column:span 2;background:linear-gradient(125deg,#112b48,#0a1b2f)}.project-num{font-family:monospace;color:var(--cyan);font-size:.76rem}.project h3{font-size:1.45rem;line-height:1.1;margin:18px 0 10px;letter-spacing:-.03em}.project p{font-size:.91rem;color:var(--muted);margin:0}.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:auto;padding-top:22px}.tag{font-size:.72rem;color:var(--lime);border:1px solid rgba(184,240,106,.23);padding:4px 7px;border-radius:3px}.labs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.lab{padding:22px;border-left:2px solid var(--cyan);background:rgba(13,32,54,.7)}.lab h3{margin:0 0 9px;font-size:1.08rem}.lab p{margin:0;color:var(--muted);font-size:.88rem}.certificates{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.certificate{position:relative;padding:28px;border:1px solid var(--line);border-radius:10px;background:linear-gradient(145deg,#112642,#091728);overflow:hidden}.certificate:after{content:"";position:absolute;width:150px;height:150px;border:1px solid rgba(77,225,233,.2);border-radius:50%;right:-45px;top:-55px}.certificate-mark{width:42px;height:42px;display:grid;place-items:center;border:1px solid var(--cyan);border-radius:50%;color:var(--cyan);font-size:1.05rem;font-weight:900;position:relative;z-index:1}.certificate h3{font-size:1.4rem;line-height:1.1;margin:20px 0 8px;letter-spacing:-.03em}.certificate p{color:var(--muted);font-size:.9rem;margin:0}.certificate-meta{display:block;margin:18px 0;color:var(--lime);font-family:monospace;font-size:.75rem}.certificate .verify{display:inline-block;color:var(--cyan);font-size:.82rem;font-weight:800;border-bottom:1px solid var(--cyan);padding-bottom:2px}.timeline{border-left:1px solid var(--line);padding-left:28px;margin-top:32px}.time{position:relative;padding:0 0 28px}.time:before{content:"";position:absolute;width:10px;height:10px;border-radius:50%;background:var(--cyan);left:-34px;top:8px;box-shadow:0 0 0 5px var(--bg)}.time small{color:var(--cyan);font-weight:700}.time h3{margin:5px 0;font-size:1.06rem}.time p{color:var(--muted);margin:0;font-size:.9rem}.contact{padding:86px 0;background:linear-gradient(90deg,rgba(77,225,233,.12),rgba(95,141,255,.12));border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.contact-box{display:flex;align-items:center;justify-content:space-between;gap:30px}.contact h2{font-size:clamp(2rem,4vw,3.5rem);letter-spacing:-.05em;line-height:1;margin:0}.contact p{color:var(--muted);margin:12px 0 0}.contact-links{display:flex;gap:10px;flex-wrap:wrap}.footer{padding:25px 0;color:#8297ac;font-size:.8rem;display:flex;justify-content:space-between}
-    @media(max-width:800px){.links{display:none}.hero,.split{grid-template-columns:1fr;gap:32px}.hero{padding-top:45px;min-height:auto}.terminal{max-width:520px}.projects,.labs,.certificates{grid-template-columns:1fr}.project.featured{grid-column:auto}.contact-box{align-items:flex-start;flex-direction:column}.capabilities{grid-template-columns:1fr}.footer{gap:10px;flex-direction:column}}@media(max-width:440px){.wrap{width:min(100% - 28px,1120px)}.nav{height:96px}.brand{font-size:1.55rem}h1{font-size:3.1rem}section{padding:70px 0}}
-  </style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description"
+        content="Portfolio of Nouran Mohsen Moustafa - Network Security and Cybersecurity graduate." />
+    <title>Nouran Mohsen | Network Security Portfolio</title>
+
+    <style>
+        :root {
+            --bg: #07111f;
+            --panel: #0c1a2d;
+            --panel2: #10233c;
+            --line: rgba(170, 205, 235, .16);
+            --text: #ecf5ff;
+            --muted: #a6b8ca;
+            --cyan: #4de1e9;
+            --blue: #5f8dff;
+            --lime: #b8f06a;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--text);
+            font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+            line-height: 1.6
+        }
+
+        body:before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            opacity: .35;
+            background-image:
+                linear-gradient(rgba(91, 157, 210, .07) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(91, 157, 210, .07) 1px, transparent 1px);
+            background-size: 54px 54px;
+            mask-image: linear-gradient(#000, transparent 80%)
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none
+        }
+
+        .wrap {
+            width: min(1120px, calc(100% - 40px));
+            margin: auto
+        }
+
+        .nav {
+            height: 112px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            z-index: 3
+        }
+
+        .brand {
+            display: block;
+            white-space: nowrap;
+            transform: translateY(11px);
+            font-family: "Trebuchet MS", "Arial Narrow", sans-serif;
+            font-size: 2rem;
+            font-weight: 900;
+            line-height: 1;
+            letter-spacing: -.045em
+        }
+
+        .brand i {
+            color: var(--cyan);
+            font-style: normal
+        }
+
+        .links {
+            display: flex;
+            gap: 22px;
+            color: var(--muted);
+            font-size: .88rem
+        }
+
+        .links a:hover {
+            color: var(--cyan)
+        }
+
+        .hero {
+            min-height: 625px;
+            display: grid;
+            grid-template-columns: 1.25fr .75fr;
+            gap: 45px;
+            align-items: center;
+            padding: 70px 0 80px;
+            position: relative
+        }
+
+        .eyebrow {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            color: var(--cyan);
+            font-size: .78rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: .14em
+        }
+
+        .dot {
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background: var(--lime);
+            box-shadow: 0 0 18px var(--lime)
+        }
+
+        h1 {
+            font-size: clamp(3.15rem, 7.1vw, 6.45rem);
+            line-height: .93;
+            letter-spacing: -.065em;
+            margin: 20px 0 23px;
+            max-width: 720px
+        }
+
+        h1 span {
+            color: transparent;
+            -webkit-text-stroke: 1px var(--cyan)
+        }
+
+        .intro {
+            font-size: 1.12rem;
+            color: var(--muted);
+            max-width: 640px;
+            margin: 0 0 31px
+        }
+
+        .actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap
+        }
+
+        .button {
+            padding: 13px 18px;
+            border-radius: 7px;
+            border: 1px solid var(--cyan);
+            font-weight: 700;
+            font-size: .92rem;
+            transition: .2s
+        }
+
+        .button.primary {
+            background: var(--cyan);
+            color: #06202c
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 28px rgba(77, 225, 233, .18)
+        }
+
+        .terminal {
+            background: linear-gradient(145deg, #112642, #081728);
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            padding: 22px;
+            box-shadow: 18px 22px 0 rgba(77, 225, 233, .05), 0 24px 50px rgba(0, 0, 0, .25);
+            font-family: "Cascadia Code", Consolas, monospace;
+            font-size: .78rem;
+            color: #b8cadb
+        }
+
+        .terminal-head {
+            display: flex;
+            gap: 6px;
+            margin-bottom: 25px
+        }
+
+        .terminal-head b {
+            width: 9px;
+            height: 9px;
+            background: #ff6e68;
+            border-radius: 50%
+        }
+
+        .terminal-head b:nth-child(2) {
+            background: #ffd769
+        }
+
+        .terminal-head b:nth-child(3) {
+            background: #61df8c
+        }
+
+        .terminal p {
+            margin: 8px 0
+        }
+
+        .terminal .cmd {
+            color: var(--cyan)
+        }
+
+        .terminal .out {
+            color: var(--lime);
+            padding-left: 15px
+        }
+
+        .terminal .cursor {
+            color: var(--cyan);
+            animation: blink 1s step-end infinite
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 0
+            }
+        }
+
+        section {
+            padding: 95px 0;
+            position: relative
+        }
+
+        .section-label {
+            color: var(--cyan);
+            font-size: .76rem;
+            text-transform: uppercase;
+            letter-spacing: .16em;
+            font-weight: 800
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 4vw, 3.45rem);
+            line-height: 1.04;
+            letter-spacing: -.045em;
+            margin: 12px 0 20px
+        }
+
+        .section-copy {
+            color: var(--muted);
+            max-width: 720px;
+            font-size: 1.05rem
+        }
+
+        .split {
+            display: grid;
+            grid-template-columns: 1fr 1.1fr;
+            gap: 60px;
+            align-items: start
+        }
+
+        .pill-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 9px;
+            margin-top: 26px
+        }
+
+        .pill {
+            font-size: .81rem;
+            border: 1px solid var(--line);
+            padding: 8px 10px;
+            border-radius: 5px;
+            background: rgba(20, 46, 76, .42);
+            color: #d2dfec
+        }
+
+        .capabilities {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px
+        }
+
+        .cap {
+            padding: 19px;
+            background: var(--panel);
+            border: 1px solid var(--line);
+            border-radius: 9px
+        }
+
+        .cap strong {
+            display: block;
+            color: var(--cyan);
+            margin-bottom: 5px;
+            font-size: .9rem
+        }
+
+        .cap span {
+            font-size: .86rem;
+            color: var(--muted)
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px
+        }
+
+        .project {
+            min-height: 390px;
+            display: flex;
+            flex-direction: column;
+            padding: 24px;
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            background: linear-gradient(145deg, var(--panel), #091728);
+            transition: .25s
+        }
+
+        .project:hover {
+            border-color: rgba(77, 225, 233, .52);
+            transform: translateY(-5px)
+        }
+
+        .project.featured {
+            grid-column: span 2;
+            background: linear-gradient(125deg, #112b48, #0a1b2f)
+        }
+
+        .project-num {
+            font-family: monospace;
+            color: var(--cyan);
+            font-size: .76rem
+        }
+
+        .project h3 {
+            font-size: 1.45rem;
+            line-height: 1.1;
+            margin: 18px 0 10px;
+            letter-spacing: -.03em
+        }
+
+        .project p {
+            font-size: .91rem;
+            color: var(--muted);
+            margin: 0
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+            margin-top: auto;
+            padding-top: 22px
+        }
+
+        .tag {
+            font-size: .72rem;
+            color: var(--lime);
+            border: 1px solid rgba(184, 240, 106, .23);
+            padding: 4px 7px;
+            border-radius: 3px
+        }
+
+        .labs {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px
+        }
+
+        .lab {
+            padding: 22px;
+            border-left: 2px solid var(--cyan);
+            background: rgba(13, 32, 54, .7);
+            transition: .25s
+        }
+
+        .lab:hover {
+            border-color: rgba(77, 225, 233, .52);
+            transform: translateY(-5px);
+        }
+
+        .lab h3 {
+            margin: 0 0 9px;
+            font-size: 1.08rem
+        }
+
+        .lab p {
+            margin: 0;
+            color: var(--muted);
+            font-size: .88rem
+        }
+
+        .certificates {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px
+        }
+
+        .certificate {
+            position: relative;
+            padding: 28px;
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            background: linear-gradient(145deg, #112642, #091728);
+            transition: .25s;
+            overflow: hidden
+        }
+
+        .certificate:hover {
+            border-color: rgba(77, 225, 233, .52);
+            transform: translateY(-5px);
+        }
+
+        .certificate:after {
+            content: "";
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            border: 1px solid rgba(77, 225, 233, .2);
+            border-radius: 50%;
+            right: -45px;
+            top: -55px
+        }
+
+        .certificate-mark {
+            width: 42px;
+            height: 42px;
+            display: grid;
+            place-items: center;
+            border: 1px solid var(--cyan);
+            border-radius: 50%;
+            color: var(--cyan);
+            font-size: 1.05rem;
+            font-weight: 900;
+            position: relative;
+            z-index: 1
+        }
+
+        .certificate h3 {
+            font-size: 1.4rem;
+            line-height: 1.1;
+            margin: 20px 0 8px;
+            letter-spacing: -.03em
+        }
+
+        .certificate p {
+            color: var(--muted);
+            font-size: .9rem;
+            margin: 0
+        }
+
+        .certificate-meta {
+            display: block;
+            margin: 18px 0;
+            color: var(--lime);
+            font-family: monospace;
+            font-size: .75rem
+        }
+
+        .certificate .verify {
+            display: inline-block;
+            color: var(--cyan);
+            font-size: .82rem;
+            font-weight: 800;
+            border-bottom: 1px solid var(--cyan);
+            padding-bottom: 2px
+        }
+
+        .timeline {
+            border-left: 1px solid var(--line);
+            padding-left: 28px;
+            margin-top: 32px
+        }
+
+        .time {
+            position: relative;
+            padding: 0 0 28px
+        }
+
+        .time:before {
+            content: "";
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--cyan);
+            left: -34px;
+            top: 8px;
+            box-shadow: 0 0 0 5px var(--bg)
+        }
+
+        .time small {
+            color: var(--cyan);
+            font-weight: 700
+        }
+
+        .time h3 {
+            margin: 5px 0;
+            font-size: 1.06rem
+        }
+
+        .time p {
+            color: var(--muted);
+            margin: 0;
+            font-size: .9rem
+        }
+
+        .contact {
+            padding: 86px 0;
+            background: linear-gradient(90deg, rgba(77, 225, 233, .12), rgba(95, 141, 255, .12));
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line)
+        }
+
+        .contact-box {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px
+        }
+
+        .contact h2 {
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            letter-spacing: -.05em;
+            line-height: 1;
+            margin: 0
+        }
+
+        .contact p {
+            color: var(--muted);
+            margin: 12px 0 0
+        }
+
+        .contact-links {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap
+        }
+
+        .footer {
+            padding: 25px 0;
+            color: #8297ac;
+            font-size: .8rem;
+            display: flex;
+            justify-content: space-between
+        }
+
+        @media(max-width:800px) {
+            .links {
+                display: none
+            }
+
+            .hero,
+            .split {
+                grid-template-columns: 1fr;
+                gap: 32px
+            }
+
+            .hero {
+                padding-top: 45px;
+                min-height: auto
+            }
+
+            .terminal {
+                max-width: 520px
+            }
+
+            .projects,
+            .labs,
+            .certificates {
+                grid-template-columns: 1fr
+            }
+
+            .project.featured {
+                grid-column: auto
+            }
+
+            .contact-box {
+                align-items: flex-start;
+                flex-direction: column
+            }
+
+            .capabilities {
+                grid-template-columns: 1fr
+            }
+
+            .footer {
+                gap: 10px;
+                flex-direction: column
+            }
+        }
+
+        @media(max-width:440px) {
+            .wrap {
+                width: min(100% - 28px, 1120px)
+            }
+
+            .nav {
+                height: 96px
+            }
+
+            .brand {
+                font-size: 1.55rem
+            }
+
+            h1 {
+                font-size: 3.1rem
+            }
+
+            section {
+                padding: 70px 0
+            }
+        }
+    </style>
 </head>
+
 <body>
-  <header class="wrap nav"><a class="brand" href="#home">NOURAN MOHSEN<i>.SEC</i></a><nav class="links"><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#labs">Labs</a><a href="#certificates">Certificates</a><a href="#contact">Contact</a></nav></header>
-  <main>
-    <section id="home" class="wrap hero">
-      <div><div class="eyebrow"><span class="dot"></span> Available for entry-level opportunities</div><h1>Networks.<br><span>Secured.</span><br>Purposefully.</h1><p class="intro">Telecommunications &amp; Electronics Engineering graduate focused on Network Security and Cybersecurity. I bridge the gap between network design and hands-on security analysis.</p><div class="actions"><a class="button primary" href="#projects">Explore my work</a><a class="button" href="mailto:nouran.mohsen167@gmail.com">Get in touch</a></div></div>
-      <aside class="terminal"><div class="terminal-head"><b></b><b></b><b></b></div><p><span class="cmd">nouran@portfolio:~$</span> whoami</p><p class="out">Network Security &amp; Cybersecurity Graduate</p><p><span class="cmd">nouran@portfolio:~$</span> focus --list</p><p class="out">[+] Network Security</p><p class="out">[+] SOC &amp; Security Analysis</p><p class="out">[+] Hands-on Security Labs</p><p><span class="cmd">nouran@portfolio:~$</span> status</p><p class="out">Ready to learn. Ready to contribute.<span class="cursor">_</span></p></aside>
+
+    <header class="wrap nav">
+        <a class="brand" href="#home">NOURAN MOHSEN<i>.SEC</i></a>
+
+        <nav class="links">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#labs">Labs</a>
+            <a href="#certificates">Certificates</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- HERO -->
+        <section id="home" class="wrap hero">
+
+            <div>
+                <div class="eyebrow">
+                    <span class="dot"></span>
+                    Available for internships &amp; entry-level opportunities
+                </div>
+
+                <h1>
+                    Networks.<br>
+                    <span>Secured.</span><br>
+                    Purposefully.
+                </h1>
+
+                <p class="intro">
+                    Communication &amp; Electronics Engineering graduate focused on
+                    Network Security and Cybersecurity. I bridge the gap between
+                    network design and hands-on security analysis.
+                </p>
+
+                <div class="actions">
+                    <a class="button primary" href="#projects">Explore my work</a>
+                    <a class="button" href="mailto:nouran.mohsen167@gmail.com">Get in touch</a>
+                </div>
+            </div>
+
+            <aside class="terminal">
+                <div class="terminal-head">
+                    <b></b><b></b><b></b>
+                </div>
+
+                <p>
+                    <span class="cmd">nouran@portfolio:~$</span> whoami
+                </p>
+
+                <p class="out">
+                    Network Security &amp; Cybersecurity Graduate
+                </p>
+
+                <p>
+                    <span class="cmd">nouran@portfolio:~$</span> focus --list
+                </p>
+
+                <p class="out">[+] Network Security</p>
+                <p class="out">[+] Security Analysis</p>
+                <p class="out">[+] Penetration Tester</p>
+                <p class="out">[+] Hands-on Security Labs</p>
+
+                <p>
+                    <span class="cmd">nouran@portfolio:~$</span> status
+                </p>
+
+                <p class="out">
+                    Ready to learn. Ready to contribute.
+                    <span class="cursor">_</span>
+                </p>
+            </aside>
+
+        </section>
+
+
+        <!-- ABOUT -->
+        <section id="about">
+
+            <div class="wrap split">
+
+                <div>
+                    <div class="section-label">01 / About me</div>
+
+                    <h2 class="section-title">
+                        Engineering thinking, security mindset.
+                    </h2>
+
+                    <p class="section-copy">
+                        My engineering background gave me a strong foundation in
+                        communication and networking. I have worked with routing,
+                        switching, network segmentation, wireless communication
+                        concepts, and troubleshooting - and now apply that foundation
+                        to cybersecurity.
+                    </p>
+
+                    <div class="pill-grid">
+                        <span class="pill">Mansoura University</span>
+                        <span class="pill">2021 - 2026</span>
+                        <span class="pill">Arabic · Native</span>
+                        <span class="pill">English · Very Good</span>
+                    </div>
+                </div>
+
+                <div class="capabilities">
+
+                    <div class="cap">
+                        <strong>Design</strong>
+                        <span>
+                            Simulate structured networks with Cisco technologies and GNS3.
+                        </span>
+                    </div>
+
+                    <div class="cap">
+                        <strong>Protect</strong>
+                        <span>
+                            Implement ACLs, segmentation, firewall rules, NAT, and VPNs.
+                        </span>
+                    </div>
+
+                    <div class="cap">
+                        <strong>Analyze</strong>
+                        <span>
+                            Capture traffic, investigate issues, and identify potential causes.
+                        </span>
+                    </div>
+
+                    <div class="cap">
+                        <strong>Test</strong>
+                        <span>
+                            Perform controlled reconnaissance, enumeration, and security testing.
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SKILLS -->
+        <section id="skills">
+
+            <div class="wrap">
+
+                <div class="section-label">02 / Technical toolkit</div>
+
+                <h2 class="section-title">
+                    Built around how networks<br>
+                    operate - and how they break.
+                </h2>
+
+                <div class="split">
+
+                    <div>
+                        <h3>Networking &amp; Security</h3>
+
+                        <div class="pill-grid">
+                            <span class="pill">TCP/IP &amp; OSI</span>
+                            <span class="pill">VLANs / Inter-VLAN</span>
+                            <span class="pill">Routing: OSPF, BGP</span>
+                            <span class="pill">STP &amp; Port Security</span>
+                            <span class="pill">DHCP / DNS</span>
+                            <span class="pill">NAT / PAT</span>
+                            <span class="pill">ACLs &amp; AAA</span>
+                            <span class="pill">DMZ &amp; Segmentation</span>
+                            <span class="pill">Firewall Policies</span>
+                            <span class="pill">VPN / OpenVPN</span>
+                            <span class="pill">IDS / IPS</span>
+                        </div>
+                    </div>
+
+
+                    <div>
+                        <h3>Platforms &amp; Tools</h3>
+
+                        <div class="pill-grid">
+                            <span class="pill">OPNsense / pfSense</span>
+                            <span class="pill">Cisco ASA</span>
+                            <span class="pill">Suricata</span>
+                            <span class="pill">Wireshark</span>
+                            <span class="pill">Nmap</span>
+                            <span class="pill">Kali Linux</span>
+                            <span class="pill">Metasploit</span>
+                            <span class="pill">Burp Suite</span>
+                            <span class="pill">Gobuster</span>
+                            <span class="pill">Packet Tracer</span>
+                            <span class="pill">GNS3</span>
+                            <span class="pill">VMware</span>
+                            <span class="pill">Linux &amp; Windows</span>
+                            <span class="pill">PortSwigger</span>
+                            <span class="pill">Hack The Box</span>
+                            <span class="pill">TryHackMe · Top 7%</span>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!-- PROGRAMMING -->
+                <div style="margin-top:60px;">
+
+                    <h3>Programming</h3>
+
+                    <div class="pill-grid">
+                        <span class="pill">Python</span>
+                        <span class="pill">HTML</span>
+                        <span class="pill">CSS</span>
+                        <span class="pill">C</span>
+                        <span class="pill">Java</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROJECTS -->
+        <section id="projects">
+
+            <div class="wrap">
+
+                <div class="section-label">03 / Selected projects</div>
+
+                <h2 class="section-title">
+                    Security, designed in layers.
+                </h2>
+
+                <div class="projects">
+
+                    <article class="project featured">
+                        <span class="project-num">01 / CAPSTONE PROJECT</span>
+
+                        <h3>
+                            Predicta - Smart Secure Enterprise Network
+                        </h3>
+
+                        <p>
+                            An integrated graduation project combining enterprise networking,
+                            Windows Server, cybersecurity, hybrid cloud, AI, and DevOps.
+                            Designed to connect infrastructure, monitoring, and security
+                            thinking in one enterprise-focused solution.
+                        </p>
+
+                        <div class="tags">
+                            <span class="tag">Enterprise Networking</span>
+                            <span class="tag">Windows Server</span>
+                            <span class="tag">Cybersecurity</span>
+                            <span class="tag">Hybrid Cloud</span>
+                            <span class="tag">AI / DevOps</span>
+                        </div>
+                    </article>
+
+
+                    <article class="project">
+                        <span class="project-num">02 / NETWORK SECURITY</span>
+
+                        <h3>Secure Corporate Network</h3>
+
+                        <p>
+                            Designed and implemented a segmented corporate network in GNS3,
+                            with OPNsense firewall policy, NAT/PAT, OpenVPN, Suricata IDS/IPS,
+                            Wireshark analysis, and controlled Kali Linux testing.
+                        </p>
+
+                        <div class="tags">
+                            <span class="tag">GNS3</span>
+                            <span class="tag">OPNsense</span>
+                            <span class="tag">Suricata</span>
+                            <span class="tag">OpenVPN</span>
+                        </div>
+                    </article>
+
+
+                    <article class="project">
+                        <span class="project-num">03 / ENTERPRISE LAB</span>
+
+                        <h3>Enterprise Network Security Lab</h3>
+
+                        <p>
+                            Built a segmented enterprise topology integrating
+                            router-on-a-stick, STP, DHCP, OSPF, ACLs, DMZ, AAA, VPN,
+                            firewall policies, and IDS/IPS concepts.
+                        </p>
+
+                        <div class="tags">
+                            <span class="tag">VLANs</span>
+                            <span class="tag">OSPF</span>
+                            <span class="tag">AAA</span>
+                            <span class="tag">DMZ</span>
+                        </div>
+                    </article>
+
+
+                    <article class="project">
+                        <span class="project-num">04 / FIREWALL LAB</span>
+
+                        <h3>Cisco ASA Firewall Lab</h3>
+
+                        <p>
+                            Configured ASA interfaces, security levels, NAT, ACLs,
+                            DMZ access controls, and traffic filtering in a simulated
+                            enterprise environment.
+                        </p>
+
+                        <div class="tags">
+                            <span class="tag">Cisco ASA</span>
+                            <span class="tag">NAT</span>
+                            <span class="tag">ACLs</span>
+                            <span class="tag">Troubleshooting</span>
+                        </div>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- LABS -->
+        <section id="labs">
+
+            <div class="wrap">
+
+                <div class="section-label">04 / Hands-on labs</div>
+
+                <h2 class="section-title">
+                    Practice makes the analysis sharper.
+                </h2>
+
+                <div class="labs">
+
+                    <article class="lab">
+                        <h3>Web Security</h3>
+
+                        <p>
+                            Hands-on web labs covering HTTP/HTTPS, cookies, DNS,
+                            content discovery, directory and subdomain enumeration,
+                            virtual hosts, Burp Suite, and Gobuster.
+                        </p>
+                    </article>
+
+
+                    <article class="lab">
+                        <h3>Linux Security</h3>
+
+                        <p>
+                            Practical Linux administration and security exercises:
+                            command line, permissions, processes, services, networking
+                            commands, SSH, RDP, reconnaissance, and vulnerability
+                            assessment concepts.
+                        </p>
+                    </article>
+
+
+                    <article class="lab">
+                        <h3>TryHackMe</h3>
+
+                        <p>
+                            Interactive guided challenges focused on networking,
+                            Linux, web security, enumeration, Metasploit, shells,
+                            RDP, content discovery, and network security.
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CERTIFICATES -->
+        <section id="certificates">
+
+            <div class="wrap">
+
+                <div class="section-label">05 / Certifications</div>
+
+                <h2 class="section-title">
+                    Learning backed by<br>
+                    hands-on achievement.
+                </h2>
+
+                <div class="certificates">
+
+                    <article class="certificate">
+
+                        <div class="certificate-mark">THM</div>
+
+                        <h3>
+                            TryHackMe<br>
+                            Pre Security
+                        </h3>
+
+                        <p>
+                            Completed the Pre Security learning path, building foundational
+                            knowledge in practical cybersecurity concepts.
+                        </p>
+
+                        <span class="certificate-meta">
+                            06 SEP 2026 · 19H 10M
+                        </span>
+
+                        <a class="verify" href="https://tryhackme.com/certificate/THM-KQFBVYWRTR" target="_blank"
+                            rel="noopener">
+                            Verify certificate ↗
+                        </a>
+
+                    </article>
+
+
+                    <article class="certificate">
+
+                        <div class="certificate-mark">NTI</div>
+
+                        <h3>
+                            Network Security<br>
+                            Summer Training
+                        </h3>
+
+                        <p>
+                            Successfully completed the Network Security summer training
+                            program delivered by the National Telecommunication Institute.
+                        </p>
+
+                        <span class="certificate-meta">
+                            31 AUG - 25 SEP 2025 · 120 HOURS
+                        </span>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- LEARNING JOURNEY -->
+        <section>
+
+            <div class="wrap split">
+
+                <div>
+
+                    <div class="section-label">
+                        06 / Learning journey
+                    </div>
+
+                    <h2 class="section-title">
+                        Focused learning,<br>
+                        applied deliberately.
+                    </h2>
+
+                </div>
+
+
+                <div class="timeline">
+
+                    <div class="time">
+                        <small>2025</small>
+
+                        <h3>
+                            Network Security Summer Training · NTI
+                        </h3>
+
+                        <p>
+                            Hands-on exposure to networking, firewalls, IDS/IPS, Linux,
+                            Wireshark, Kali Linux, monitoring, and controlled security testing.
+                        </p>
+                    </div>
+
+
+                    <div class="time">
+                        <small>2021 - 2026</small>
+
+                        <h3>
+                            Faculty of Engineering · Mansoura University
+                        </h3>
+
+                        <p>
+                            Communication and Electronics Engineering. Relevant study
+                            includes Computer Networks, Network Security, Wireless and
+                            Digital Communications, Signal Processing, MATLAB, Antennas,
+                            and Microwave Engineering.
+                        </p>
+                    </div>
+
+
+                    <div class="time">
+                        <small>Ongoing</small>
+
+                        <h3>
+                            Hands-on Cybersecurity Labs
+                        </h3>
+
+                        <p>
+                            Practicing through hands-on labs on TryHackMe, PortSwigger,
+                            and Hack The Box, with a focus on web security, enumeration,
+                            networking, Linux, and penetration-testing fundamentals.
+                        </p>
+                    </div>
+                    <div class="time">
+                        <small>Ongoing</small>
+
+                        <h3>
+                            DEPI Trainee &amp; Continuous Practice
+                        </h3>
+
+                        <p>
+                            Developing practical network-security and junior penetration-testing
+                            skills through labs, self-paced learning, and guided challenges.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+
+        <div class="wrap contact-box">
+
+            <div>
+
+                <div class="section-label">
+                    07 / Contact
+                </div>
+
+                <h2>
+                    Let's secure<br>
+                    what's next.
+                </h2>
+
+                <p>
+                    Open to entry-level Network Security, penetration testing and Cybersecurity opportunities.
+                </p>
+
+            </div>
+
+
+            <div class="contact-links">
+
+                <a class="button primary" href="mailto:nouran.mohsen167@gmail.com">
+                    Email me
+                </a>
+
+
+                <a class="button" href="https://www.linkedin.com/in/nouran-elsebaie-62844924b" target="_blank"
+                    rel="noopener">
+                    LinkedIn ↗
+                </a>
+
+                <a class="button" href="https://github.com/nouranelsebaie" target="_blank" rel="noopener">
+                    GitHub ↗
+                </a>
+
+
+                <a class="button" href="tel:+201003209368">
+                    +20 100 320 9368
+                </a>
+
+
+                <!-- DOWNLOAD CV -->
+                <a class="button" href="Nouran-Mohsen-CV.pdf" download>
+                    Download CV ↓
+                </a>
+
+            </div>
+
+        </div>
+
     </section>
-    <section id="about"><div class="wrap split"><div><div class="section-label">01 / About me</div><h2 class="section-title">Engineering thinking, security mindset.</h2><p class="section-copy">My engineering background gave me a strong foundation in telecommunications and networking. I have worked with routing, switching, network segmentation, wireless communication concepts, and troubleshooting - and now apply that foundation to cybersecurity.</p><div class="pill-grid"><span class="pill">Mansoura University</span><span class="pill">2021 - 2026</span><span class="pill">Very Good</span><span class="pill">Arabic · Native</span><span class="pill">English · Very Good</span></div></div><div class="capabilities"><div class="cap"><strong>Design</strong><span>Simulate structured networks with Cisco technologies and GNS3.</span></div><div class="cap"><strong>Protect</strong><span>Implement ACLs, segmentation, firewall rules, NAT, and VPNs.</span></div><div class="cap"><strong>Analyze</strong><span>Capture traffic, investigate issues, and identify potential causes.</span></div><div class="cap"><strong>Test</strong><span>Perform controlled reconnaissance, enumeration, and security testing.</span></div></div></div></section>
-    <section id="skills"><div class="wrap"><div class="section-label">02 / Technical toolkit</div><h2 class="section-title">Built around how networks<br>operate - and how they break.</h2><div class="split"><div><h3>Networking &amp; Security</h3><div class="pill-grid"><span class="pill">TCP/IP &amp; OSI</span><span class="pill">VLANs / Inter-VLAN</span><span class="pill">Routing: OSPF, BGP</span><span class="pill">STP &amp; Port Security</span><span class="pill">DHCP / DNS</span><span class="pill">NAT / PAT</span><span class="pill">ACLs &amp; AAA</span><span class="pill">DMZ &amp; Segmentation</span><span class="pill">Firewall Policies</span><span class="pill">VPN / OpenVPN</span><span class="pill">IDS / IPS</span></div></div><div><h3>Platforms &amp; Tools</h3><div class="pill-grid"><span class="pill">OPNsense / pfSense</span><span class="pill">Cisco ASA</span><span class="pill">Suricata</span><span class="pill">Wireshark</span><span class="pill">Nmap</span><span class="pill">Kali Linux</span><span class="pill">Metasploit</span><span class="pill">Burp Suite</span><span class="pill">Gobuster</span><span class="pill">Packet Tracer</span><span class="pill">GNS3</span><span class="pill">VMware</span><span class="pill">Linux &amp; Windows</span></div></div></div></div></section>
-    <section id="projects"><div class="wrap"><div class="section-label">03 / Selected projects</div><h2 class="section-title">Security, designed in layers.</h2><div class="projects">
-      <article class="project featured"><span class="project-num">01 / CAPSTONE PROJECT</span><h3>Predicta - Smart Secure Enterprise Network</h3><p>An integrated graduation project combining enterprise networking, Windows Server, cybersecurity, hybrid cloud, AI, and DevOps. Designed to connect infrastructure, monitoring, and security thinking in one enterprise-focused solution.</p><div class="tags"><span class="tag">Enterprise Networking</span><span class="tag">Windows Server</span><span class="tag">Cybersecurity</span><span class="tag">Hybrid Cloud</span><span class="tag">AI / DevOps</span></div></article>
-      <article class="project"><span class="project-num">02 / NETWORK SECURITY</span><h3>Secure Corporate Network</h3><p>Designed and implemented a segmented corporate network in GNS3, with OPNsense firewall policy, NAT/PAT, OpenVPN, Suricata IDS/IPS, Wireshark analysis, and controlled Kali Linux testing.</p><div class="tags"><span class="tag">GNS3</span><span class="tag">OPNsense</span><span class="tag">Suricata</span><span class="tag">OpenVPN</span></div></article>
-      <article class="project"><span class="project-num">03 / ENTERPRISE LAB</span><h3>Enterprise Network Security Lab</h3><p>Built a segmented enterprise topology integrating router-on-a-stick, STP, DHCP, OSPF, ACLs, DMZ, AAA, VPN, firewall policies, and IDS/IPS concepts.</p><div class="tags"><span class="tag">VLANs</span><span class="tag">OSPF</span><span class="tag">AAA</span><span class="tag">DMZ</span></div></article>
-      <article class="project"><span class="project-num">04 / FIREWALL LAB</span><h3>Cisco ASA Firewall Lab</h3><p>Configured ASA interfaces, security levels, NAT, ACLs, DMZ access controls, and traffic filtering in a simulated enterprise environment.</p><div class="tags"><span class="tag">Cisco ASA</span><span class="tag">NAT</span><span class="tag">ACLs</span><span class="tag">Troubleshooting</span></div></article>
-    </div></div></section>
-    <section id="labs"><div class="wrap"><div class="section-label">04 / Hands-on labs</div><h2 class="section-title">Practice makes the analysis sharper.</h2><div class="labs"><article class="lab"><h3>Web Security</h3><p>Hands-on web labs covering HTTP/HTTPS, cookies, DNS, content discovery, directory and subdomain enumeration, virtual hosts, Burp Suite, and Gobuster.</p></article><article class="lab"><h3>Linux Security</h3><p>Practical Linux administration and security exercises: command line, permissions, processes, services, networking commands, SSH, RDP, reconnaissance, and vulnerability assessment concepts.</p></article><article class="lab"><h3>TryHackMe</h3><p>Interactive guided challenges focused on networking, Linux, web security, enumeration, Metasploit, shells, RDP, content discovery, and network security.</p></article></div></div></section>
-    <section id="certificates"><div class="wrap"><div class="section-label">05 / Certifications</div><h2 class="section-title">Learning backed by<br>hands-on achievement.</h2><div class="certificates"><article class="certificate"><div class="certificate-mark">THM</div><h3>TryHackMe<br>Pre Security</h3><p>Completed the Pre Security learning path, building foundational knowledge in practical cybersecurity concepts.</p><span class="certificate-meta">06 SEP 2026 · 19H 10M</span><a class="verify" href="https://tryhackme.com/certificate/THM-KQFBVYWRTR" target="_blank" rel="noopener">Verify certificate ↗</a></article><article class="certificate"><div class="certificate-mark">NTI</div><h3>Network Security<br>Summer Training</h3><p>Successfully completed the Network Security summer training program delivered by the National Telecommunication Institute.</p><span class="certificate-meta">31 AUG - 25 SEP 2025 · 120 HOURS</span></article></div></div></section>
-    <section><div class="wrap split"><div><div class="section-label">06 / Learning journey</div><h2 class="section-title">Focused learning,<br>applied deliberately.</h2></div><div class="timeline"><div class="time"><small>2025</small><h3>Network Security Summer Training · NTI</h3><p>Hands-on exposure to networking, firewalls, IDS/IPS, Linux, Wireshark, Kali Linux, monitoring, and controlled security testing.</p></div><div class="time"><small>2021 - 2026</small><h3>Faculty of Engineering · Mansoura University</h3><p>Telecommunications and Electronics Engineering. Relevant study includes Computer Networks, Network Security, Wireless and Digital Communications, Signal Processing, MATLAB, Antennas, and Microwave Engineering.</p></div><div class="time"><small>Ongoing</small><h3>DEPI Trainee &amp; Continuous Practice</h3><p>Developing practical network-security and junior penetration-testing skills through labs, self-paced learning, and guided challenges.</p></div></div></div></section>
-  </main>
-  <section id="contact" class="contact"><div class="wrap contact-box"><div><div class="section-label">07 / Contact</div><h2>Let's secure<br>what's next.</h2><p>Open to entry-level Network Security, SOC, and Cybersecurity opportunities.</p></div><div class="contact-links"><a class="button primary" href="mailto:nouran.mohsen167@gmail.com">Email me</a><a class="button" href="https://www.linkedin.com/in/nouran-elsebaie-62844924b" target="_blank" rel="noopener">LinkedIn ↗</a><a class="button" href="tel:+201003209368">+20 100 320 9368</a></div></div></section>
-  <footer class="wrap footer"><span>© 2026 Nouran Mohsen</span><span>Networking + Cybersecurity + Hands-on Problem Solving</span></footer>
+
+
+    <footer class="wrap footer">
+
+        <span>© 2026 Nouran Mohsen</span>
+
+        <span>
+            Networking + Cybersecurity + Hands-on Problem Solving
+        </span>
+
+    </footer>
+
 </body>
+
 </html>
